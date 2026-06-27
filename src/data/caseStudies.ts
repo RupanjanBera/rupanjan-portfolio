@@ -4,6 +4,7 @@ export interface CaseStudy {
   slug: string;
   title: string;
   status: string;
+  liveSite?: string;
   screenshot?: string;
   screenshotAlt?: string;
   overview: string;
@@ -159,6 +160,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "gaming-odyssey",
     title: "Gaming Odyssey — Gaming Brand & Community",
     status: "In Progress",
+    liveSite: "https://gamingodyssey.in",
     screenshot: "/projects/gaming-odyssey.jpg",
     screenshotAlt: "Gaming Odyssey landing page with gaming gear, tournaments, and community branding",
     overview:
@@ -224,6 +226,7 @@ export const caseStudies: CaseStudy[] = [
     slug: "memorialife",
     title: "MemoriaLife — AI Chatbot Product",
     status: "Product Concept",
+    liveSite: "https://memorialife.online",
     screenshot: "/projects/memorialife.jpg",
     screenshotAlt: "MemoriaLife landing page for high-fidelity AI personas and digital legacy preservation",
     overview:

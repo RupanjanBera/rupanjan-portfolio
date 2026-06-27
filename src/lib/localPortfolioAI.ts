@@ -9,6 +9,7 @@ import {
 } from "@/data/site";
 import { buildProofCards } from "@/data/buildProof";
 import { AI_PREVIEW_EXCHANGE } from "@/data/portfolioKnowledge";
+import { isLiveLink } from "@/lib/utils";
 
 export interface ChatMessage {
   role: "user" | "assistant";
@@ -165,6 +166,10 @@ function getProjectAnswer(slug: string): string | null {
   const project = projects.find((p) => p.slug === slug);
   if (!project) return null;
 
+  const liveSite = isLiveLink(project.links.liveDemo)
+    ? `\n**Live site:** ${project.links.liveDemo}`
+    : "";
+
   return `**${project.title}** — ${project.tagline}
 **Status:** ${project.statusLabel}
 **Category:** ${project.category}
@@ -175,7 +180,7 @@ ${project.shortDescription}
 **Built/Explored:** ${project.builtExplored.join("; ")}
 **Planned Next:** ${project.plannedNext.join("; ")}
 **Tech Stack:** ${project.techStack.join(", ")}
-**What it shows:** ${project.whatItShows.join(", ")}`;
+**What it shows:** ${project.whatItShows.join(", ")}${liveSite}`;
 }
 
 function getOverview(): string {

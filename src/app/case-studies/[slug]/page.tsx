@@ -1,10 +1,10 @@
 import { notFound } from "next/navigation";
 import Link from "next/link";
 import Image from "next/image";
-import { ArrowLeft, CheckCircle, Lightbulb, Wrench, Target, AlertTriangle } from "lucide-react";
+import { ArrowLeft, CheckCircle, Lightbulb, Wrench, Target, AlertTriangle, ExternalLink } from "lucide-react";
 import { getCaseStudyBySlug, caseStudies } from "@/data/caseStudies";
 import { getProjectBySlug } from "@/data/projects";
-import { isSvgSrc } from "@/lib/utils";
+import { isSvgSrc, isLiveLink } from "@/lib/utils";
 import type { Metadata } from "next";
 
 interface PageProps {
@@ -53,6 +53,23 @@ export default async function CaseStudyPage({ params }: PageProps) {
         </h1>
 
         <p className="mb-6 text-lg leading-relaxed text-muted">{study.overview}</p>
+
+        {isLiveLink(study.liveSite) && (
+          <div className="mb-8 flex flex-wrap gap-3">
+            <a
+              href={study.liveSite}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 rounded-full bg-navy px-5 py-2.5 text-sm font-medium text-white transition-colors hover:bg-navy-soft"
+            >
+              <ExternalLink className="h-4 w-4" />
+              Visit Live Site
+            </a>
+            <span className="inline-flex items-center rounded-full border border-slate-200 bg-surface px-4 py-2.5 text-xs text-muted">
+              {study.liveSite.replace(/^https?:\/\//, "")}
+            </span>
+          </div>
+        )}
 
         <div className="mb-10 rounded-2xl border border-slate-100 bg-surface-muted p-5">
           <p className="text-xs font-semibold uppercase tracking-wider text-muted">Current State</p>

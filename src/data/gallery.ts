@@ -11,6 +11,7 @@ export interface GalleryItem {
   highlight: string;
   whatItShows: string[];
   caseStudyUrl: string;
+  liveSite?: string;
   image?: string;
   imageAlt?: string;
 }
@@ -58,6 +59,7 @@ export const galleryItems: GalleryItem[] = [
       "Gaming brand built around community identity, visual storytelling, and technology integration beyond entertainment.",
     whatItShows: ["Branding & storytelling", "Audience-oriented design"],
     caseStudyUrl: "/case-studies/gaming-odyssey",
+    liveSite: "https://gamingodyssey.in",
     image: "/projects/gaming-odyssey.jpg",
     imageAlt: "Gaming Odyssey hero page with custom PC builds and gaming community branding",
   },
@@ -88,6 +90,7 @@ export const galleryItems: GalleryItem[] = [
       "AI service concept with trust, payment flow, and onboarding — product structure beyond chatbot functionality.",
     whatItShows: ["Product flow design", "Customer experience planning"],
     caseStudyUrl: "/case-studies/memorialife",
+    liveSite: "https://memorialife.online",
     image: "/projects/memorialife.jpg",
     imageAlt: "MemoriaLife homepage preserving digital legacy with AI personas and live demo",
   },

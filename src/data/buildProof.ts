@@ -12,6 +12,7 @@ export interface BuildProofCard {
   tools: string[];
   type: "workspace" | "platform" | "brand" | "maker" | "productivity";
   caseStudyUrl: string;
+  liveSite?: string;
   image?: string;
   imageAlt?: string;
   imagePosition?: "top" | "center" | "bottom";
@@ -68,6 +69,7 @@ export const buildProofCards: BuildProofCard[] = [
     tools: ["Branding", "Next.js", "Community UX"],
     type: "brand",
     caseStudyUrl: "/case-studies/gaming-odyssey",
+    liveSite: "https://gamingodyssey.in",
     image: "/projects/gaming-odyssey.jpg",
     imageAlt: "Gaming Odyssey landing page",
     imagePosition: "center",

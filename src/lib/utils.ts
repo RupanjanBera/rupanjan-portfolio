@@ -15,3 +15,8 @@ export function slugify(text: string): string {
 export function isSvgSrc(src: string): boolean {
   return src.toLowerCase().endsWith(".svg");
 }
+
+export function isLiveLink(href?: string): href is string {
+  if (!href || href === "#") return false;
+  return href.startsWith("http://") || href.startsWith("https://");
+}

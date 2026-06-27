@@ -56,6 +56,8 @@ export function Hero({ onOpenAI }: HeroProps) {
     }
     if (href.startsWith("#")) {
       document.querySelector(href)?.scrollIntoView({ behavior: "smooth" });
+    } else if (href.startsWith("http")) {
+      window.open(href, "_blank", "noopener,noreferrer");
     } else {
       window.location.href = href;
     }

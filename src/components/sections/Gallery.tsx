@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { motion } from "framer-motion";
-import { FileText, ArrowUpRight } from "lucide-react";
+import { FileText, ArrowUpRight, ExternalLink } from "lucide-react";
+import { isLiveLink } from "@/lib/utils";
 import { galleryItems } from "@/data/gallery";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { MockupFrame } from "@/components/ui/MockupFrame";
@@ -79,6 +80,17 @@ export function Gallery() {
                         <FileText className="h-3.5 w-3.5" />
                         View Case Study
                       </Link>
+                      {isLiveLink(item.liveSite) && (
+                        <a
+                          href={item.liveSite}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-3.5 py-2 text-xs font-medium text-navy transition-colors hover:border-accent/30 hover:bg-accent-soft hover:text-accent"
+                        >
+                          <ExternalLink className="h-3.5 w-3.5" />
+                          Visit Site
+                        </a>
+                      )}
                       <Link
                         href="#projects"
                         className="inline-flex items-center gap-1 text-xs text-muted transition-colors hover:text-accent"

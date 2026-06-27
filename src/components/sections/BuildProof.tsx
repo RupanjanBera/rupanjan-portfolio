@@ -2,13 +2,13 @@
 
 import Link from "next/link";
 import { PortfolioImage } from "@/components/ui/PortfolioImage";
-import { Layers, Code2, Palette, Cpu, Presentation, FileText, ArrowUpRight } from "lucide-react";
+import { Layers, Code2, Palette, Cpu, Presentation, FileText, ArrowUpRight, ExternalLink } from "lucide-react";
 import { buildProofCards } from "@/data/buildProof";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ParallaxLayer } from "@/components/motion/ParallaxLayer";
 import { TiltCard } from "@/components/motion/TiltCard";
 import { RevealGroup, RevealItem } from "@/components/motion/Reveal";
-import { cn } from "@/lib/utils";
+import { cn, isLiveLink } from "@/lib/utils";
 
 const typeIcons = {
   workspace: Layers,
@@ -116,7 +116,7 @@ export function BuildProof() {
                     ))}
                   </div>
 
-                  <div className="mt-auto flex items-center gap-3 border-t border-slate-100 pt-4">
+                  <div className="mt-auto flex flex-wrap items-center gap-3 border-t border-slate-100 pt-4">
                     <Link
                       href={card.caseStudyUrl}
                       className="inline-flex items-center gap-1.5 rounded-full bg-navy px-3.5 py-2 text-xs font-medium text-white transition-colors hover:bg-navy-soft"
@@ -124,6 +124,17 @@ export function BuildProof() {
                       <FileText className="h-3.5 w-3.5" />
                       View Case Study
                     </Link>
+                    {isLiveLink(card.liveSite) && (
+                      <a
+                        href={card.liveSite}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-3.5 py-2 text-xs font-medium text-navy transition-colors hover:border-accent/30 hover:bg-accent-soft hover:text-accent"
+                      >
+                        <ExternalLink className="h-3.5 w-3.5" />
+                        Visit Site
+                      </a>
+                    )}
                     <Link
                       href={card.caseStudyUrl}
                       className="ml-auto inline-flex items-center gap-1 text-xs text-accent opacity-0 transition-opacity group-hover:opacity-100"

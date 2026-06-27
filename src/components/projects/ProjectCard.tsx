@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { ExternalLink, Github, ImageIcon, FileText, ArrowUpRight } from "lucide-react";
 import { Project } from "@/data/projects";
 import { PortfolioImage } from "@/components/ui/PortfolioImage";
-import { cn } from "@/lib/utils";
+import { cn, isLiveLink } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: Project;
@@ -166,16 +166,18 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
               <FileText className="h-3.5 w-3.5" />
               Case Study
             </a>
-            {project.links.liveDemo && (
+            {isLiveLink(project.links.liveDemo) && (
               <a
                 href={project.links.liveDemo}
-                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-4 py-2 text-xs font-medium text-navy transition-colors hover:bg-surface-muted"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1.5 rounded-full border border-slate-200 px-4 py-2 text-xs font-medium text-navy transition-colors hover:border-accent/30 hover:bg-accent-soft hover:text-accent"
               >
                 <ExternalLink className="h-3.5 w-3.5" />
-                Preview
+                Visit Site
               </a>
             )}
-            {project.links.github && (
+            {isLiveLink(project.links.github) && (
               <a
                 href={project.links.github}
                 className="inline-flex items-center justify-center rounded-full border border-slate-200 p-2 text-muted hover:text-navy"

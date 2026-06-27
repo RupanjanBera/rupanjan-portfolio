@@ -106,8 +106,8 @@ export const heroSlides: HeroSlide[] = [
       { icon: Bot, title: "AI Helper", desc: "Community chatbot concepts." },
       { icon: Sparkles, title: "Content Hub", desc: "Publishing and showcase structure." },
     ],
-    primaryCta: { label: "View Case Study", href: "/case-studies/gaming-odyssey" },
-    secondaryCta: { label: "Gallery", href: "#gallery" },
+    primaryCta: { label: "Visit Site", href: "https://gamingodyssey.in" },
+    secondaryCta: { label: "Case Study", href: "/case-studies/gaming-odyssey" },
     stat: { value: "In Progress", label: "Brand + web build" },
   },
   {
