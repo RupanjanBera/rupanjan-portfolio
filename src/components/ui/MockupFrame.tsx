@@ -49,7 +49,7 @@ function MockupFrameContent({
       {imageSrc ? (
         <div
           className={cn(
-            "relative w-full overflow-hidden",
+            "relative aspect-[16/10] w-full overflow-hidden",
             embedded ? "bg-surface-muted" : cn("bg-gradient-to-br", typeStyles[type])
           )}
         >
@@ -57,7 +57,7 @@ function MockupFrameContent({
           <img
             src={imageSrc}
             alt={imageAlt || title}
-            className="block h-auto w-full"
+            className="h-full w-full object-cover object-center"
             loading="lazy"
             decoding="async"
           />

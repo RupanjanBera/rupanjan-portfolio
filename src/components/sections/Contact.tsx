@@ -4,15 +4,14 @@ import { useState } from "react";
 import { motion } from "framer-motion";
 import {
   Mail,
-  Github,
-  Linkedin,
-  Twitter,
   Instagram,
   Send,
   CheckCircle,
   MapPin,
   AlertCircle,
+  Phone,
 } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { contact, siteConfig } from "@/data/site";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { submitContactForm } from "@/lib/formSubmit";
@@ -246,23 +245,28 @@ export function Contact() {
             </div>
 
             <div className="flex gap-2">
-              {[
-                { icon: Github, label: "GitHub", href: contact.github },
-                { icon: Linkedin, label: "LinkedIn", href: contact.linkedin },
-                { icon: Twitter, label: "X", href: contact.twitter },
-                { icon: Instagram, label: "Instagram", href: contact.instagram },
-              ].map(({ icon: Icon, label, href }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-100 bg-surface py-3 text-xs font-medium text-muted transition-all hover:border-violet-200 hover:text-violet-600"
-                >
-                  <Icon className="h-4 w-4" />
-                  {label}
-                </a>
-              ))}
+              <a
+                href={contact.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-100 bg-surface py-3 text-xs font-medium text-muted transition-all hover:border-violet-200 hover:text-violet-600"
+              >
+                <Instagram className="h-4 w-4" />
+                Instagram
+              </a>
+              <a
+                href={contact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`WhatsApp ${contact.phone}`}
+                className="flex flex-1 items-center justify-center gap-2 rounded-xl border border-slate-100 bg-surface py-3 text-xs font-medium text-muted transition-all hover:border-emerald-200 hover:text-emerald-600"
+              >
+                <WhatsAppIcon />
+                WhatsApp
+              </a>
             </div>
+            <p className="text-center text-xs text-muted">{contact.phone}</p>
           </motion.div>
         </div>
       </div>

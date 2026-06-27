@@ -32,56 +32,58 @@ export interface Project {
   };
   accentColor: string;
   layout: "wide" | "standard";
-  image?: string; // e.g. "/projects/mythos.jpg"
+  image?: string; // e.g. "/projects/hyperion-ai.jpg"
   imageAlt?: string;
+  imagePosition?: "top" | "center" | "bottom";
 }
 
 export const projects: Project[] = [
   {
-    id: "mythos",
-    slug: "mythos",
-    title: "Mythos",
-    tagline: "Personal AI Workspace",
+    id: "hyperion-ai",
+    slug: "hyperion-ai",
+    title: "Hyperion AI",
+    tagline: "Unified AI Workspace",
     category: "AI",
     categories: ["AI", "Web"],
     shortDescription:
-      "A workspace concept so students, creators, and builders don't need fragmented tools just to think, research, write, and create.",
+      "A full AI workspace with chat, agents, knowledge, research, files, slide maker, and memory — so builders don't need fragmented tools to think, research, write, and create.",
     problemSolved:
       "Jumping between separate AI tools creates friction, context loss, and inconsistent workflows for people who need to research, write, and build.",
     keyFeatures: [
-      "AI chat workspace",
-      "Multi-model support & selection",
-      "File upload & document understanding",
-      "Web research workflows",
+      "Auto-routed chat workspace",
+      "Agents & project organization",
+      "Knowledge base & file understanding",
+      "Web research with citations",
+      "Slide Maker module",
       "Memory-aware interaction",
-      "Presentation generation direction",
-      "Workspace-style UX",
+      "Multi-model support",
     ],
     techStack: ["Next.js", "TypeScript", "OpenAI API", "Claude API", "DeepSeek API", "Tailwind CSS"],
     status: "Working Prototype",
     statusLabel: "Working Prototype",
     whatItShows: [
       "AI product thinking beyond chatbots",
-      "Workflow & interface design",
-      "Model orchestration ideas",
+      "Full workspace UX with modular tools",
+      "Model orchestration & agent routing",
       "SaaS-style system structure",
     ],
     builtExplored: [
-      "Workspace UI architecture and dashboard layout",
-      "Multi-model API integration patterns",
-      "Chat, file, and research workflow planning",
-      "Model selector and reasoning control concepts",
+      "Hyperion AI workspace UI with sidebar navigation",
+      "Chat, agents, knowledge, research, and files modules",
+      "Slide Maker and memories integration direction",
+      "Auto-routed workspace with voice and citations",
     ],
     plannedNext: [
       "Persistent memory across sessions",
       "Agent workflow chains",
-      "Live slide generation module",
+      "Live slide export module",
     ],
-    links: { caseStudy: "/case-studies/mythos", liveDemo: "#", github: "#", screenshots: "#gallery" },
+    links: { caseStudy: "/case-studies/hyperion-ai", liveDemo: "#", github: "#", screenshots: "#gallery" },
     accentColor: "from-blue-500 to-cyan-500",
     layout: "wide",
-    image: "/projects/mythos.jpg",
-    imageAlt: "Mythos AI workspace interface showing chat welcome screen with sidebar navigation",
+    image: "/projects/hyperion-ai.jpg",
+    imageAlt: "Hyperion AI workspace showing chat interface with agents, knowledge, research, slide maker, and files",
+    imagePosition: "center",
   },
   {
     id: "kryvax",
@@ -128,6 +130,7 @@ export const projects: Project[] = [
     layout: "standard",
     image: "/projects/kryvax.jpg",
     imageAlt: "Kryvax AI intelligence ecosystem with session management and advanced reasoning features",
+    imagePosition: "center",
   },
   {
     id: "gaming-odyssey",
@@ -173,6 +176,7 @@ export const projects: Project[] = [
     layout: "standard",
     image: "/projects/gaming-odyssey.jpg",
     imageAlt: "Gaming Odyssey landing page with gaming gear showcase and community branding",
+    imagePosition: "center",
   },
   {
     id: "memorialife",
@@ -218,6 +222,7 @@ export const projects: Project[] = [
     layout: "standard",
     image: "/projects/memorialife.jpg",
     imageAlt: "MemoriaLife landing page for AI-powered digital legacy and persona preservation",
+    imagePosition: "center",
   },
   {
     id: "ai-presentation-studio",
@@ -261,8 +266,9 @@ export const projects: Project[] = [
     links: { caseStudy: "/case-studies/ai-presentation-studio", liveDemo: "#", github: "#", screenshots: "#gallery" },
     accentColor: "from-amber-500 to-orange-500",
     layout: "standard",
-    image: "/projects/ai-presentation-studio.svg",
-    imageAlt: "AI Presentation Studio concept with template gallery and slide generation preview",
+    image: "/projects/ai-presentation-studio.jpg",
+    imageAlt: "AI Presentation Studio — intelligent slide generation dashboard with template gallery",
+    imagePosition: "center",
   },
   {
     id: "maker-projects",
@@ -308,6 +314,7 @@ export const projects: Project[] = [
     layout: "wide",
     image: "/projects/maker-projects.jpg",
     imageAlt: "Raspberry Pi and ESP32 IoT setup with temperature and humidity sensor display on LCD",
+    imagePosition: "center",
   },
 ];
 

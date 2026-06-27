@@ -1,0 +1,5 @@
+{
+  "env": {
+    "NEXT_PUBLIC_PORTFOLIO_AI_API_URL": "https://portfolio-ai-api-omega.vercel.app/api/portfolio-ai"
+  }
+}

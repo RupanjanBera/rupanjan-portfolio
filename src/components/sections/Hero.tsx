@@ -236,7 +236,7 @@ export function Hero({ onOpenAI }: HeroProps) {
                       src={slide.image}
                       alt={slide.imageAlt}
                       fill
-                      className="object-cover object-center"
+                      className="object-cover object-center transition-transform duration-700 hover:scale-[1.02]"
                       sizes="(max-width: 1024px) 100vw, 50vw"
                       priority={active === 0}
                     />

@@ -1,0 +1,33 @@
+name: Deploy Portfolio AI API
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "portfolio-ai-api/**"
+      - "src/data/**"
+      - "scripts/generate-api-knowledge.mjs"
+      - ".github/workflows/deploy-portfolio-ai.yml"
+  workflow_dispatch:
+
+jobs:
+  deploy-api:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Sync portfolio knowledge for API
+        run: node scripts/generate-api-knowledge.mjs
+
+      - name: Deploy to Vercel (free tier)
+        uses: amondnet/vercel-action@v25
+        with:
+          vercel-token: ${{ secrets.VERCEL_TOKEN }}
+          vercel-org-id: ${{ secrets.VERCEL_ORG_ID }}
+          vercel-project-id: ${{ secrets.VERCEL_PROJECT_ID }}
+          working-directory: portfolio-ai-api
+          vercel-args: "--prod"

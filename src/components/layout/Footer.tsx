@@ -1,7 +1,8 @@
 "use client";
 
 import Image from "next/image";
-import { Github, Linkedin, Twitter, Instagram, Mail, ArrowUpRight } from "lucide-react";
+import { Instagram, ArrowUpRight } from "lucide-react";
+import { WhatsAppIcon } from "@/components/ui/WhatsAppIcon";
 import { siteConfig, contact, navigation } from "@/data/site";
 
 export function Footer() {
@@ -67,23 +68,26 @@ export function Footer() {
               {contact.email}
             </a>
             <div className="flex items-center gap-2">
-              {[
-                { icon: Mail, href: `mailto:${contact.email}`, label: "Email" },
-                { icon: Github, href: contact.github, label: "GitHub" },
-                { icon: Linkedin, href: contact.linkedin, label: "LinkedIn" },
-                { icon: Twitter, href: contact.twitter, label: "Twitter" },
-                { icon: Instagram, href: contact.instagram, label: "Instagram" },
-              ].map(({ icon: Icon, href, label }) => (
-                <a
-                  key={label}
-                  href={href}
-                  aria-label={label}
-                  className="rounded-xl border border-slate-100 p-2.5 text-muted transition-all hover:border-violet-200 hover:bg-violet-50 hover:text-violet-600"
-                >
-                  <Icon className="h-4 w-4" />
-                </a>
-              ))}
+              <a
+                href={contact.instagram}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Instagram"
+                className="rounded-xl border border-slate-100 p-2.5 text-muted transition-all hover:border-violet-200 hover:bg-violet-50 hover:text-violet-600"
+              >
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a
+                href={contact.whatsapp}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label={`WhatsApp ${contact.phone}`}
+                className="rounded-xl border border-slate-100 p-2.5 text-muted transition-all hover:border-emerald-200 hover:bg-emerald-50 hover:text-emerald-600"
+              >
+                <WhatsAppIcon />
+              </a>
             </div>
+            <p className="mt-3 text-xs text-muted">{contact.phone}</p>
           </div>
         </div>
 

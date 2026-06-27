@@ -1,14 +1,14 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
+import { PortfolioImage } from "@/components/ui/PortfolioImage";
 import { Layers, Code2, Palette, Cpu, Presentation, FileText, ArrowUpRight } from "lucide-react";
 import { buildProofCards } from "@/data/buildProof";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ParallaxLayer } from "@/components/motion/ParallaxLayer";
 import { TiltCard } from "@/components/motion/TiltCard";
 import { RevealGroup, RevealItem } from "@/components/motion/Reveal";
-import { cn, isSvgSrc } from "@/lib/utils";
+import { cn } from "@/lib/utils";
 
 const typeIcons = {
   workspace: Layers,
@@ -42,7 +42,7 @@ export function BuildProof() {
         <SectionHeading
           label="Build Proof"
           title="Real work, real direction"
-          description="Product experiments with real screenshots, working prototypes, and honest build status — each links to a full case study."
+          description="Product experiments with real screenshots, working prototypes, and honest build status — designed to impress reviewers who need proof, not promises."
         />
 
         <RevealGroup className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
@@ -57,13 +57,12 @@ export function BuildProof() {
                     href={card.caseStudyUrl}
                     className="relative aspect-[16/9] w-full overflow-hidden border-b border-slate-100"
                   >
-                    <Image
+                    <PortfolioImage
                       src={card.image}
                       alt={card.imageAlt || card.title}
-                      fill
-                      className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                      objectPosition={card.imagePosition || "center"}
+                      className="transition-transform duration-500 group-hover:scale-105"
                       sizes="(max-width: 768px) 100vw, 33vw"
-                      unoptimized={isSvgSrc(card.image)}
                     />
                   </Link>
                 )}

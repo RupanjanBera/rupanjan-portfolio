@@ -94,7 +94,7 @@ export const AI_SUGGESTED_QUESTIONS = [
   "Summarize his strongest projects",
   "Why should a university consider him?",
   "How does he combine business and technology?",
-  "What is Mythos?",
+  "What is Hyperion AI?",
   "What is currently active vs conceptual?",
 ];
 
@@ -102,7 +102,7 @@ export const AI_QUESTION_GROUPS = [
   {
     label: "Projects",
     icon: "layers" as const,
-    questions: ["What is Mythos?", "What is currently active vs conceptual?", "Summarize his strongest projects"],
+    questions: ["What is Hyperion AI?", "What is currently active vs conceptual?", "Summarize his strongest projects"],
   },
   {
     label: "Profile",
@@ -117,7 +117,7 @@ export const AI_QUESTION_GROUPS = [
 ];
 
 export const AI_PREVIEW_EXCHANGE = {
-  question: "What is Mythos and what stage is it at?",
+  question: "What is Hyperion AI and what stage is it at?",
   answer:
-    "Mythos is Rupanjan's personal AI workspace — a working prototype for research, writing, and multi-model workflows in one place. It's beyond a chatbot: file understanding, research flows, and presentation direction are all part of the vision.",
+    "Hyperion AI is Rupanjan's unified AI workspace — a working prototype with auto-routed chat, agents, knowledge, research, files, slide maker, and memory. It's beyond a chatbot: a full productivity environment for students and builders.",
 };

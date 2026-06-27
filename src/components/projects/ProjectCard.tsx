@@ -1,10 +1,10 @@
 "use client";
 
-import Image from "next/image";
 import { motion } from "framer-motion";
 import { ExternalLink, Github, ImageIcon, FileText, ArrowUpRight } from "lucide-react";
 import { Project } from "@/data/projects";
-import { cn, isSvgSrc } from "@/lib/utils";
+import { PortfolioImage } from "@/components/ui/PortfolioImage";
+import { cn } from "@/lib/utils";
 
 interface ProjectCardProps {
   project: Project;
@@ -47,13 +47,11 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
         >
           {project.image ? (
             <>
-              <Image
+              <PortfolioImage
                 src={project.image}
                 alt={project.imageAlt || project.title}
-                fill
-                className="object-cover object-top"
+                objectPosition={project.imagePosition || "center"}
                 sizes="(max-width: 768px) 100vw, 50vw"
-                unoptimized={isSvgSrc(project.image)}
               />
               <div className="absolute inset-0 bg-gradient-to-t from-navy/80 via-navy/20 to-transparent" />
               <div className="relative z-10 flex h-full min-h-[220px] flex-col justify-between p-6">

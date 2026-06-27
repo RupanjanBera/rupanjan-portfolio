@@ -65,7 +65,7 @@ export function AISection({ onOpenAI }: AISectionProps) {
         <SectionHeading
           label="Portfolio AI"
           title="Ask anything about my work"
-          description="A grounded assistant trained on this portfolio — projects, skills, education, and build status. No fluff, no made-up achievements."
+          description="A grounded assistant trained on this portfolio — projects, skills, education, and build status. Powered by DeepSeek on free Vercel hosting. No fluff, no made-up achievements."
         />
 
         <motion.div
@@ -91,7 +91,7 @@ export function AISection({ onOpenAI }: AISectionProps) {
                 <span className="text-gradient">what I build</span>
               </h3>
               <p className="mt-4 max-w-md text-sm leading-relaxed text-muted md:text-base">
-                Skip scrolling through every section. Ask about Mythos, Kryvax, skills,
+                Skip scrolling through every section. Ask about Hyperion AI, Kryvax, skills,
                 education, or what&apos;s active vs still conceptual.
               </p>
 

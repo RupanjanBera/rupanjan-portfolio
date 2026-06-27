@@ -24,13 +24,13 @@ export interface CaseStudy {
 
 export const caseStudies: CaseStudy[] = [
   {
-    slug: "mythos",
-    title: "Mythos — Personal AI Workspace",
+    slug: "hyperion-ai",
+    title: "Hyperion AI — Unified AI Workspace",
     status: "Working Prototype",
-    screenshot: "/projects/mythos.jpg",
-    screenshotAlt: "Mythos AI workspace showing chat interface with projects, knowledge, research, and files navigation",
+    screenshot: "/projects/hyperion-ai.jpg",
+    screenshotAlt: "Hyperion AI workspace showing chat interface with agents, knowledge, research, slide maker, and files navigation",
     overview:
-      "Mythos explores how students, creators, and builders can work in a single AI workspace — combining chat, file understanding, web research, memory, model selection, and presentation workflows without jumping between fragmented tools.",
+      "Hyperion AI is a unified AI workspace for students, creators, and builders — combining auto-routed chat, agents, knowledge, web research, files, slide maker, and memory without jumping between fragmented tools.",
     problem:
       "Most people use many different AI tools for different tasks. This creates friction, context loss, and inconsistent workflows for people who need to research, write, and create.",
     whyBuilt:
@@ -289,8 +289,8 @@ export const caseStudies: CaseStudy[] = [
     slug: "ai-presentation-studio",
     title: "AI Presentation Studio",
     status: "Product Concept",
-    screenshot: "/projects/ai-presentation-studio.svg",
-    screenshotAlt: "AI Presentation Studio slide generation and template gallery concept",
+    screenshot: "/projects/ai-presentation-studio.jpg",
+    screenshotAlt: "AI Presentation Studio — intelligent slide generation dashboard",
     overview:
       "Exploring intelligent slide generation through templates, AI-assisted content, image generation, and structured presentation output.",
     problem:

@@ -66,7 +66,7 @@ export default async function CaseStudyPage({ params }: PageProps) {
                 src={study.screenshot}
                 alt={study.screenshotAlt || study.title}
                 fill
-                className="object-cover object-top"
+                className="object-cover object-center"
                 sizes="(max-width: 896px) 100vw, 896px"
                 priority
                 unoptimized={isSvgSrc(study.screenshot)}

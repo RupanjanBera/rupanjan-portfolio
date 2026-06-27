@@ -1,0 +1,6 @@
+{
+  "name": "portfolio-ai-api",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Free Vercel-hosted Portfolio AI backend for static GitHub Pages site"
+}

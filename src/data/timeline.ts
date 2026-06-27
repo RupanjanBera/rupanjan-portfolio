@@ -27,9 +27,9 @@ export const timeline: TimelineEntry[] = [
   },
   {
     year: "2024",
-    title: "Mythos AI Workspace",
+    title: "Hyperion AI Workspace",
     description:
-      "Built Mythos as a personal AI workspace concept — exploring unified chat, research, file understanding, and productivity workflows.",
+      "Built Hyperion AI as a unified AI workspace — exploring auto-routed chat, agents, knowledge, research, slide maker, and productivity workflows.",
   },
   {
     year: "2024–25",

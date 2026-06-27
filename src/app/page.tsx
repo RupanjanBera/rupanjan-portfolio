@@ -8,6 +8,7 @@ import { Footer } from "@/components/layout/Footer";
 import { CommandMenu } from "@/components/layout/CommandMenu";
 import { PortfolioAI } from "@/components/ai/PortfolioAI";
 import { Hero } from "@/components/sections/Hero";
+import { ImpactStats } from "@/components/sections/ImpactStats";
 import { BuildProof } from "@/components/sections/BuildProof";
 import { About } from "@/components/sections/About";
 import { Projects } from "@/components/sections/Projects";
@@ -57,10 +58,7 @@ export default function Home() {
       />
       <main>
         <Hero onOpenAI={() => openAI()} />
-        <div
-          aria-hidden
-          className="pointer-events-none relative -mt-px h-32 bg-gradient-to-b from-[#08080f] via-[#08080f]/40 to-transparent"
-        />
+        <ImpactStats />
         <BuildProof />
         <About />
         <Projects />

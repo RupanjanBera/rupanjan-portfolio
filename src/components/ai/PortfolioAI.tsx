@@ -17,6 +17,7 @@ import {
 } from "lucide-react";
 import { AI_QUESTION_GROUPS } from "@/data/portfolioKnowledge";
 import { siteConfig } from "@/data/site";
+import { askPortfolioAI } from "@/lib/portfolioAIClient";
 import { cn } from "@/lib/utils";
 
 interface Message {
@@ -50,6 +51,7 @@ export function PortfolioAI({ open, onClose, initialQuestion }: PortfolioAIProps
   const [input, setInput] = useState("");
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
+  const [aiSource, setAiSource] = useState<"api" | "local" | null>(null);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
   const pendingQuestionRef = useRef<string | null>(null);
@@ -101,16 +103,9 @@ export function PortfolioAI({ open, onClose, initialQuestion }: PortfolioAIProps
     setError(null);
 
     try {
-      const res = await fetch("/api/portfolio-ai", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ messages: newMessages }),
-      });
-
-      const data = await res.json();
-      if (!res.ok) throw new Error(data.error || "Failed to get response");
-
-      setMessages((prev) => [...prev, { role: "assistant", content: data.message }]);
+      const { message, source } = await askPortfolioAI(newMessages);
+      setAiSource(source);
+      setMessages((prev) => [...prev, { role: "assistant", content: message }]);
     } catch (err) {
       setError(
         err instanceof Error
@@ -172,7 +167,10 @@ export function PortfolioAI({ open, onClose, initialQuestion }: PortfolioAIProps
                         <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-400 opacity-60" />
                         <span className="relative inline-flex h-1.5 w-1.5 rounded-full bg-emerald-500" />
                       </span>
-                      <p className="text-xs text-muted">Portfolio data only · DeepSeek</p>
+                      <p className="text-xs text-muted">
+                        Portfolio data only
+                        {aiSource === "api" ? " · DeepSeek" : aiSource === "local" ? " · Instant" : ""}
+                      </p>
                     </div>
                   </div>
                 </div>
@@ -315,7 +313,7 @@ export function PortfolioAI({ open, onClose, initialQuestion }: PortfolioAIProps
                   ref={inputRef}
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder="Ask about Mythos, skills, goals..."
+                  placeholder="Ask about Hyperion AI, skills, goals..."
                   disabled={loading}
                   className="flex-1 bg-transparent px-3 py-2.5 text-sm text-navy outline-none placeholder:text-muted disabled:opacity-50"
                 />

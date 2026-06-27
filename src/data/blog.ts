@@ -20,24 +20,24 @@ export interface BlogPost {
 
 export const blogPosts: BlogPost[] = [
   {
-    slug: "building-mythos-ai-workspace-vision",
-    title: "Building Mythos: My AI Workspace Vision",
+    slug: "building-hyperion-ai-workspace-vision",
+    title: "Building Hyperion AI: My Workspace Vision",
     excerpt:
       "Why I started building a unified AI workspace and what I learned about product scope, model routing, and interface design.",
     date: "Mar 2025",
     readTime: "5 min read",
     category: "AI Products",
-    tags: ["Mythos", "Product Design", "AI"],
+    tags: ["Hyperion AI", "Product Design", "AI"],
     featured: true,
     content: [
       {
         type: "p",
-        text: "Most people using AI today jump between ChatGPT, Claude, a search tab, a notes app, and maybe a slide tool. That fragmentation is exactly what Mythos is trying to solve — not by building another chatbot, but by thinking in workspaces.",
+        text: "Most people using AI today jump between ChatGPT, Claude, a search tab, a notes app, and maybe a slide tool. That fragmentation is exactly what Hyperion AI is trying to solve — not by building another chatbot, but by thinking in workspaces.",
       },
       { type: "h2", text: "Why a workspace, not a chatbot" },
       {
         type: "p",
-        text: "When I started Mythos, the goal wasn't to replicate existing AI apps. It was to design a single environment where research, writing, file understanding, and presentation direction could live together. Students and builders don't need five subscriptions — they need one coherent flow.",
+        text: "When I started Hyperion AI, the goal wasn't to replicate existing AI apps. It was to design a single environment where research, writing, file understanding, and presentation direction could live together. Students and builders don't need five subscriptions — they need one coherent flow.",
       },
       {
         type: "ul",
@@ -51,11 +51,11 @@ export const blogPosts: BlogPost[] = [
       { type: "h2", text: "What I learned about scope" },
       {
         type: "p",
-        text: "The hardest part wasn't API integration — it was deciding what belongs in v1. I had to be honest: Mythos is a working prototype, not a finished SaaS. That clarity helped me focus on interface architecture and workflow design instead of pretending every feature was live.",
+        text: "The hardest part wasn't API integration — it was deciding what belongs in v1. I had to be honest: Hyperion AI is a working prototype, not a finished SaaS. That clarity helped me focus on interface architecture and workflow design instead of pretending every feature was live.",
       },
       {
         type: "quote",
-        text: "A good prototype answers a question. Mythos asks: what if AI tools felt like a workspace instead of a vending machine?",
+        text: "A good prototype answers a question. Hyperion AI asks: what if AI tools felt like a workspace instead of a vending machine?",
       },
       {
         type: "p",
@@ -172,7 +172,7 @@ export const blogPosts: BlogPost[] = [
       { type: "h2", text: "Building as learning" },
       {
         type: "p",
-        text: "I don't wait until I have a CS degree to build products. Every project — Mythos, Gaming Odyssey, maker experiments — is a way to learn how real systems work. Commerce gives me the 'why' behind the 'what' I'm building.",
+        text: "I don't wait until I have a CS degree to build products. Every project — Hyperion AI, Gaming Odyssey, maker experiments — is a way to learn how real systems work. Commerce gives me the 'why' behind the 'what' I'm building.",
       },
     ],
   },
@@ -194,7 +194,7 @@ export const blogPosts: BlogPost[] = [
       {
         type: "ul",
         items: [
-          "Ship working prototypes for Mythos and Kryvax",
+          "Ship working prototypes for Hyperion AI and Kryvax",
           "Document case studies honestly — prototypes vs. concepts vs. experiments",
           "Continue maker projects to show hardware + software range",
           "Apply to universities and scholarships with proof of work, not just grades",

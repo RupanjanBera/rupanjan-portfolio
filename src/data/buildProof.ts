@@ -14,14 +14,15 @@ export interface BuildProofCard {
   caseStudyUrl: string;
   image?: string;
   imageAlt?: string;
+  imagePosition?: "top" | "center" | "bottom";
 }
 
 export const buildProofCards: BuildProofCard[] = [
   {
-    id: "mythos-proof",
+    id: "hyperion-proof",
     title: "AI Workspace Prototype",
-    category: "Mythos",
-    slug: "mythos",
+    category: "Hyperion AI",
+    slug: "hyperion-ai",
     status: "Working Prototype",
     description:
       "Multi-model AI workspace with chat, file understanding, research workflows, and presentation direction.",
@@ -30,9 +31,10 @@ export const buildProofCards: BuildProofCard[] = [
     whatItShows: ["AI product thinking beyond chatbots", "SaaS-style system structure"],
     tools: ["Next.js", "OpenAI API", "Claude API", "DeepSeek"],
     type: "workspace",
-    caseStudyUrl: "/case-studies/mythos",
-    image: "/projects/mythos.jpg",
-    imageAlt: "Mythos AI workspace interface",
+    caseStudyUrl: "/case-studies/hyperion-ai",
+    image: "/projects/hyperion-ai.jpg",
+    imageAlt: "Hyperion AI workspace interface",
+    imagePosition: "center",
   },
   {
     id: "kryvax-proof",
@@ -50,6 +52,7 @@ export const buildProofCards: BuildProofCard[] = [
     caseStudyUrl: "/case-studies/kryvax",
     image: "/projects/kryvax.jpg",
     imageAlt: "Kryvax AI platform interface",
+    imagePosition: "center",
   },
   {
     id: "gaming-proof",
@@ -67,6 +70,7 @@ export const buildProofCards: BuildProofCard[] = [
     caseStudyUrl: "/case-studies/gaming-odyssey",
     image: "/projects/gaming-odyssey.jpg",
     imageAlt: "Gaming Odyssey landing page",
+    imagePosition: "center",
   },
   {
     id: "presentation-proof",
@@ -82,8 +86,9 @@ export const buildProofCards: BuildProofCard[] = [
     tools: ["AI APIs", "Template System", "UX Design"],
     type: "productivity",
     caseStudyUrl: "/case-studies/ai-presentation-studio",
-    image: "/projects/ai-presentation-studio.svg",
-    imageAlt: "AI Presentation Studio concept",
+    image: "/projects/ai-presentation-studio.jpg",
+    imageAlt: "AI Presentation Studio — intelligent slide generation dashboard",
+    imagePosition: "center",
   },
   {
     id: "maker-proof",
@@ -101,6 +106,7 @@ export const buildProofCards: BuildProofCard[] = [
     caseStudyUrl: "/case-studies/maker-projects",
     image: "/projects/maker-projects.jpg",
     imageAlt: "Raspberry Pi and ESP32 IoT automation hardware setup",
+    imagePosition: "center",
   },
 ];
 

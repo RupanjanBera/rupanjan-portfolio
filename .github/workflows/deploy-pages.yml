@@ -30,9 +30,15 @@ jobs:
       - name: Prepare static export build
         run: rm -rf src/app/api
 
+      - name: Sync portfolio knowledge for API
+        run: node scripts/generate-api-knowledge.mjs
+
       - name: Build static site
         env:
           STATIC_EXPORT: true
+          NEXT_PUBLIC_STATIC_EXPORT: true
+          NEXT_PUBLIC_BASE_PATH: /rupanjan-portfolio
+          NEXT_PUBLIC_PORTFOLIO_AI_API_URL: ${{ secrets.PORTFOLIO_AI_API_URL }}
         run: npm run build
 
       - uses: actions/upload-pages-artifact@v3

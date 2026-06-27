@@ -29,8 +29,9 @@ export function CTA({ onOpenAI }: CTAProps) {
               Interested in collaborating?
             </h2>
             <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-violet-100/90">
-              Open to internships, scholarships, university applications, and projects
-              where {siteConfig.name.split(" ")[0]}&apos;s product thinking adds value.
+              Open to internships, scholarships, university applications, and startup
+              collaborations. {siteConfig.name.split(" ")[0]} ships prototypes, writes case studies,
+              and thinks in product systems — not just code.
             </p>
 
             <div className="mt-8 flex flex-wrap items-center justify-center gap-3">

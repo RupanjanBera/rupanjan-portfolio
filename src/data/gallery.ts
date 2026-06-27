@@ -17,19 +17,19 @@ export interface GalleryItem {
 
 export const galleryItems: GalleryItem[] = [
   {
-    id: "mythos-workspace",
-    title: "Mythos Workspace",
-    project: "Mythos",
-    slug: "mythos",
+    id: "hyperion-workspace",
+    title: "Hyperion AI Workspace",
+    project: "Hyperion AI",
+    slug: "hyperion-ai",
     type: "workspace",
     status: "Working Prototype",
     description: "AI chat workspace with memory, files, research, and citations",
     highlight:
       "Multi-model workspace so research, writing, and creation stay in one flow — not scattered across separate tools.",
     whatItShows: ["Workflow & interface design", "Model orchestration ideas"],
-    caseStudyUrl: "/case-studies/mythos",
-    image: "/projects/mythos.jpg",
-    imageAlt: "Mythos AI workspace chat interface with sidebar and prompt suggestions",
+    caseStudyUrl: "/case-studies/hyperion-ai",
+    image: "/projects/hyperion-ai.jpg",
+    imageAlt: "Hyperion AI workspace chat interface with agents, knowledge, research, and slide maker",
   },
   {
     id: "kryvax-platform",
@@ -73,8 +73,8 @@ export const galleryItems: GalleryItem[] = [
       "Template-driven slide generation with layout intelligence — structured output instead of generic AI decks.",
     whatItShows: ["Template-driven product design", "Content generation flow"],
     caseStudyUrl: "/case-studies/ai-presentation-studio",
-    image: "/projects/ai-presentation-studio.svg",
-    imageAlt: "AI Presentation Studio concept preview with template slides",
+    image: "/projects/ai-presentation-studio.jpg",
+    imageAlt: "AI Presentation Studio — slide generation dashboard with template gallery",
   },
   {
     id: "memorialife-flow",

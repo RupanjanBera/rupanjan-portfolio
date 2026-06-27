@@ -7,8 +7,8 @@ export const siteConfig = {
   profileImageAlt: "Rupanjan Bera — student developer and AI product builder",
   title: "Student. Builder. AI Product Creator.",
   description:
-    "I build AI tools, SaaS platforms, websites, automation systems, and product experiments that combine business thinking with modern software.",
-  statusBadge: "Currently building Mythos, Kryvax, and AI-powered product systems",
+    "I design and build AI workspaces, SaaS platforms, and product experiments — combining commerce education with real software architecture, honest prototypes, and global ambition.",
+  statusBadge: "Building Hyperion AI · Kryvax · Gaming Odyssey — with working prototypes & case studies",
   role: "Student Developer / AI Product Builder",
   focus: "AI products, SaaS platforms, web development, product thinking",
   url: "https://rupanjanbera.dev",
@@ -16,18 +16,25 @@ export const siteConfig = {
 
 export const aboutContent = {
   intro:
-    "I'm a commerce student with a strong interest in AI, startups, software, product design, and creative technology. I enjoy building systems that combine business logic, user experience, automation, and modern AI tools.",
+    "I'm a Class 12 Commerce student who builds like a product founder — not waiting for a degree to start shipping. I create AI workspaces, SaaS platforms, and product experiments that combine business logic, user experience, and modern software.",
   details:
-    "My work spans AI platforms, SaaS concepts, web apps, creative product experiments, and maker projects involving Raspberry Pi, ESP32, RC electronics, and IoT-style thinking.",
+    "From Hyperion AI (a working unified AI workspace) to Kryvax (multi-agent SaaS architecture), my portfolio shows depth — auth systems, pricing tiers, admin dashboards, and honest build status. I also explore gaming brands, presentation tools, and maker hardware with Raspberry Pi and ESP32.",
   traits: [
-    { title: "Builder mindset", desc: "I think in systems, workflows, and product structure — not just features." },
-    { title: "Learn by creating", desc: "Every project is a vehicle for understanding how real products work." },
-    { title: "Commerce + tech", desc: "Business education gives me a lens for practical, market-aware building." },
-    { title: "Global ambition", desc: "Building toward product, startup, and technology opportunities worldwide." },
+    { title: "Builder mindset", desc: "I think in systems, workflows, pricing, and product structure — not just features." },
+    { title: "Ships prototypes", desc: "Hyperion AI and Kryvax are working builds with real architecture — not slide decks." },
+    { title: "Commerce + tech", desc: "Accountancy and business studies inform how I design market-aware products." },
+    { title: "Global ambition", desc: "Targeting internships, scholarships, and startup opportunities worldwide." },
   ],
   goals:
-    "I'm building toward product management, AI product building, startups, and global tech opportunities — learning through hands-on creation, not just theory.",
+    "I'm building toward product management, AI product roles, and startup opportunities — proving capability through shipped prototypes, case studies, and systems thinking that recruiters and universities can evaluate immediately.",
 };
+
+export const impactStats = [
+  { value: "6+", label: "Product experiments", detail: "With full case studies" },
+  { value: "2", label: "Working prototypes", detail: "Hyperion AI & Kryvax" },
+  { value: "AI + SaaS", label: "Core expertise", detail: "Multi-model & platform design" },
+  { value: "Commerce", label: "Business foundation", detail: "Market-aware product thinking" },
+];
 
 export const education = {
   level: "Class 12 Commerce Student",
@@ -45,9 +52,8 @@ export const education = {
 
 export const contact = {
   email: "rupanjanbera5@gmail.com",
-  github: "#",
-  linkedin: "#",
-  twitter: "#",
+  phone: "+91 6290994382",
+  whatsapp: "https://wa.me/916290994382",
   instagram: "https://www.instagram.com/noticedveil",
   resumeUrl: "#",
   /** FormSubmit — https://formsubmit.co (confirm email on first submission) */
@@ -72,6 +78,6 @@ export const resumeContent = {
   name: "Rupanjan Bera",
   role: "Student Developer / AI Product Builder",
   focus: "AI products, SaaS platforms, web development, product thinking",
-  projects: ["Mythos", "Kryvax", "Gaming Odyssey", "MemoriaLife", "AI Presentation Studio", "Maker Projects"],
+  projects: ["Hyperion AI", "Kryvax", "Gaming Odyssey", "MemoriaLife", "AI Presentation Studio", "Maker Projects"],
   skills: ["AI APIs", "Next.js", "TypeScript", "Product planning", "Web development", "Automation"],
 };
