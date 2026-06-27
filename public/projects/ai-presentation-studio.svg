@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="750" viewBox="0 0 1200 750">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#fffbeb"/>
+      <stop offset="100%" style="stop-color:#fef3c7"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="750" fill="url(#bg)"/>
+  <rect x="80" y="60" width="1040" height="630" rx="24" fill="#fff" stroke="#fde68a" stroke-width="2"/>
+  <text x="600" y="200" text-anchor="middle" font-family="system-ui,sans-serif" font-size="42" font-weight="600" fill="#0f172a">AI Presentation Studio</text>
+  <text x="600" y="250" text-anchor="middle" font-family="system-ui,sans-serif" font-size="20" fill="#64748b">Template Gallery · Slide Generation · Export</text>
+  <rect x="150" y="320" width="280" height="180" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <rect x="460" y="320" width="280" height="180" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <rect x="770" y="320" width="280" height="180" rx="8" fill="#fff7ed" stroke="#fdba74"/>
+  <rect x="180" y="350" width="200" height="12" rx="4" fill="#f97316" opacity="0.3"/>
+  <rect x="180" y="380" width="160" height="8" rx="3" fill="#cbd5e1"/>
+  <rect x="180" y="400" width="180" height="8" rx="3" fill="#cbd5e1"/>
+  <text x="600" y="580" text-anchor="middle" font-family="system-ui,sans-serif" font-size="13" fill="#94a3b8">Concept Preview</text>
+</svg>
